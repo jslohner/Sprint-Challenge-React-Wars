@@ -5,7 +5,7 @@ export default function Character(props) {
 	return (
 		<CharacterStyle>
 			<h2>{props.character.name}</h2>
-			<img src={props.character.image}/>
+			<img src={props.character.image} alt={props.character.name}/>
 			<div>
 				<h3>Attributes</h3>
 				<p>Status - {props.character.status}</p>
