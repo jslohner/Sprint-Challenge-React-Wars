@@ -5,11 +5,21 @@ const CharacterStyle = styled.div`
 	width: 20%;
 	flex-flow: column;
 	margin: 0 auto;
-	border: 2px solid black;
-
+	border: 4px solid black;
+	background-color: blueviolet;
 
 	div {
-		background-color: blueviolet;
+		font-size: 90%;
+	}
+
+	h2 {
+		margin: 0;
+		font-size: 100%;
+	}
+
+	img {
+		margin: 4%;
+		border: 2px solid black;
 	}
 `
 
