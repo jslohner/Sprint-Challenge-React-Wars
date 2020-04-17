@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
-// import Character from './components/Character.js';
+import Character from './components/Character.js';
 
 const App = () => {
 
@@ -15,7 +15,6 @@ const App = () => {
 	useEffect(() => {
 		axios.get(`${proxy}/${url}/${targetData}/`)
 			.then(res => {
-				// console.log(res.data.results);
 				setCharacterData(res.data.results);
 			})
 			.catch(err => {
@@ -34,6 +33,11 @@ const App = () => {
 	return (
 		<div className='App'>
 			<h1 className='Header'>Characters</h1>
+			{
+				characterData.map(character => {
+					return <Character key={character.id} character={character}/>
+				})
+			}
 		</div>
 	);
 }
